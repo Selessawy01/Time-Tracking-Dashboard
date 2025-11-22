@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main>
+      <section class="ReportContainer">
+        <div class="headerContainer">
+           <div class="userProfile">
+               <div class="userImg">
+                  <img src="./images/image-jeremy.png" alt="">
+               </div>
+               <div class="userName">
+                  <p id="ReportTitle">Report for</p>
+                  <p id="userName">Jeremy Robson</p>
+               </div>
+           </div>
+           <div class="frameLnk">
+                <button class="lnk-btn" data-filter="daily">Daily</button>
+                <button class="lnk-btn" data-filter="weekly">Weekly</button>
+                <button class="lnk-btn" data-filter="monthly">Monthly</button>
+          </div>
+        </div>
+        <div id="cardsContainer"></div>
+      </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

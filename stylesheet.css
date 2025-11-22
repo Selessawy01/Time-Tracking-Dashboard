@@ -1,0 +1,240 @@
+*, *::after, *::before {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;}
+
+img {           display: block;
+                max-width: 100%;   }
+
+:root {     --clr-Orange-work: hsl(15, 100%, 70%);
+            --clr-Blue-play : hsl(195, 74%, 62%);
+            --clr-Pink-study: hsl(348, 100%, 68%);
+            --clr-Green-exercise: hsl(145, 58%, 55%);
+            --clr-Purple-social: hsl(264, 64%, 52%);
+            --clr-Yellow-selfCare: hsl(43, 84%, 65%);
+
+            --clr-Navy_950: hsl(226, 43%, 10%);
+            --clr-Navy_900: hsl(235, 46%, 20%);
+            --clr-Navy_200: hsl(236, 100%, 87%);
+            --clr-Purple_500: hsl(235, 45%, 61%);
+            --clr-White:#FFFFFF;
+
+            --ft-Family:"Rubik";
+            --ft-w300:300;
+            --ft-w400:400;
+            --ft-w500:500;
+
+         }
+
+body {       background-color: var(--clr-Navy_950);
+             font-family: var(--ft-Family);
+             line-height: 150%;
+             color :var(--clr-White); }
+
+main     {   display:flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center; 
+             min-height: 100vh; }
+
+.ReportContainer {      display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1.5rem;
+                        margin:4rem auto;
+                        max-width:20.4375rem;   }
+
+.headerContainer {  
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.5rem;
+                    background-color:var(--clr-Navy_900);
+                    border-radius:0.9375rem; 
+                   /* height:203px; */
+                     width:100%;
+                     padding-bottom: 1.375rem; }
+
+.userProfile {
+                    display:flex;
+                    gap:1.5rem;
+                    padding:2rem;
+                    background-color: var(--clr-Purple_500);
+                    align-items: center;
+                    border-radius: 0.9375rem; 
+                    width:100%; }
+
+.userImg {          width:64px;
+                    height:64px;
+                    border-radius: 50%;
+                    border :2px solid var(--clr-White);}
+
+#ReportTitle {      font-size: 0.9375rem; 
+                    font-weight:var(--ft-w400);
+                    line-height:18%; }
+.userName{          display:flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+}
+
+#userName {         font-size:1.5rem;
+                    font-weight:var(--ft-w300); 
+                    line-height: 28%;}
+
+.frameLnk {
+                    display: flex;
+                    width:100%;
+                   /* gap:30px;
+                    color:var(--clr-White);*/
+                     }
+
+.lnk-btn  {         color : var(--clr-Purple_500);
+                    width:109px;
+                    background: none;
+                    border:none;
+                    cursor:pointer;
+                    font-size: 1.125rem;
+                    letter-spacing: 21%;
+                    font-weight: var(--ft-w400);}
+
+.lnk-btn:hover   { text-decoration: underline;
+                   color : var(--clr-White);}
+
+#cardsContainer {
+                  display:flex;
+                  flex-direction: column; 
+                  
+                  gap:1.5rem; 
+                  width:100%;   }
+
+.card {
+           
+          /* width:327px;*/
+           border-radius:0.9375rem;
+           height:10rem;
+           position: relative;
+           background-repeat: no-repeat;
+           background-position: top right;  }
+
+.cardCont {
+            padding:1.5rem;
+            background-color:var(--clr-Navy_900);
+            border-radius: 0.9375rem;
+            position: absolute;
+            width:100%;
+            height:76.25%;
+            bottom:0px; 
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:1rem;  }
+
+.cardHeader { display:flex;
+              justify-content: space-between; 
+              align-items: center;}
+
+.cardBody   { display:flex; 
+              justify-content: space-between; 
+              align-items: center;}
+
+.eclipse    { height:3.64px;}
+
+#task       { font-size: 1.125rem; 
+              font-weight: var(--ft-w500);}
+
+#taskHrs    { font-size: 2rem; 
+              font-weight:var(--ft-w300);
+              line-height: 38%;}
+
+#taskFrame  { font-size:0.9375rem; 
+              font-weight:var(--ft-w400); 
+              line-height: 18%;}
+
+.card-work { background-color: var(--clr-Orange-work);
+             background-image: url(./images/icon-work.svg);}
+
+.card-play {background-color:var(--clr-Blue-play);
+            background-image: url(./images/icon-play.svg);}
+
+.card-study {  background-color: var(--clr-Pink-study);
+               background-image: url(./images/icon-study.svg);}
+
+.card-selfcare { background-color: var(--clr-Yellow-selfCare);
+                 background-image: url(./images/icon-self-care.svg);}
+
+.card-social {   background-color: var(--clr-Purple-social);
+                 background-image: url(./images/icon-social.svg);}
+.card-exercise { background-color: var(--clr-Green-exercise);
+                 background-image: url(./images/icon-exercise.svg);}
+               
+@media(min-width:48rem)
+{
+.ReportContainer {  max-width:38.25rem;}
+.frameLnk  { justify-content: center;}
+#cardsContainer  { display: grid;
+                   grid-template-columns: repeat(3,188px);
+                   grid-template-rows: repeat(2,213px);
+                   gap: 1.5rem;
+                  
+                  }
+
+/*.card {  width:188px; 
+         height:213px;*/
+         
+.card {width:100%; height:100%; }
+.cardCont { width:100%; 
+            height:84.5%;}
+
+.cardBody { display:flex; 
+            flex-direction: column;  
+            align-items: start;
+            gap:1.25rem;}
+
+#taskHrs { font-size: 3.5rem; 
+           line-height:66%;}
+
+}
+
+@media (min-width:90rem){
+
+.ReportContainer {
+                   max-width:69.75rem;
+                   display: grid;
+                   grid-template-columns:25% 75%;
+                   gap:2rem;
+                   margin: 4rem auto;}
+
+.headerContainer {  height:100%;}
+
+.userProfile{ width: 100%;
+              height:66.35%;
+              padding: 2rem; 
+              display:flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;}
+
+.userImg { width:78px; height:78px;}
+
+#userName { font-size:2.5rem;
+            line-height:1.2;}
+
+.frameLnk  { display: flex; 
+             flex-direction: column; 
+             padding: 2rem;
+             gap:1rem; }
+
+.lnk-btn { text-align: left;}
+
+#cardsContainer  { display: grid;
+                   grid-template-columns: repeat(3,255px);
+                   grid-template-rows:repeat(2,244px);
+                   gap:2rem; }
+
+.card { width:100% ; height:100%;}
+
+.cardCont {width:100%;}
+
+}
+

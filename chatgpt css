@@ -1,0 +1,251 @@
+/* RESET */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* VARIABLES */
+:root {
+  --clr-Orange-work: hsl(15, 100%, 70%);
+  --clr-Blue-play: hsl(195, 74%, 62%);
+  --clr-Pink-study: hsl(348, 100%, 68%);
+  --clr-Green-exercise: hsl(145, 58%, 55%);
+  --clr-Purple-social: hsl(264, 64%, 52%);
+  --clr-Yellow-selfCare: hsl(43, 84%, 65%);
+
+  --clr-Navy_950: hsl(226, 43%, 10%);
+  --clr-Navy_900: hsl(235, 46%, 20%);
+  --clr-Navy_200: hsl(236, 100%, 87%);
+  --clr-Purple_500: hsl(235, 45%, 61%);
+  --clr-White: #fff;
+
+  --ft-Family: "Rubik";
+  --ft-w300: 300;
+  --ft-w400: 400;
+  --ft-w500: 500;
+}
+
+/* GENERAL */
+body {
+  background-color: var(--clr-Navy_950);
+  font-family: var(--ft-Family);
+  line-height: 150%;
+  color: var(--clr-White);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* MAIN WRAPPER */
+.ReportContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 327px;
+}
+
+/* HEADER SECTION */
+.headerContainer {
+  background-color: var(--clr-Navy_900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.userProfile {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  width: 100%;
+  background-color: var(--clr-Purple_500);
+  border-radius: 15px;
+}
+
+.userImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-White);
+  overflow: hidden;
+}
+
+#ReportTitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+#userName {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.frameLnk {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  color: var(--clr-Purple_500);
+  text-decoration: none;
+}
+
+/* CARDS */
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  height: 160px;
+  background-color: var(--clr-Orange-work);
+  border-radius: 15px;
+  position: relative;
+  background-image: url('./images/icon-work.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.cardCont {
+  padding: 24px;
+  background-color: var(--clr-Navy_900);
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  height: 122px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eclipse {
+  height: 3.64px;
+}
+
+#task {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#taskHrs {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+#taskFrame {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   TABLET 768px 
+========================================================= */
+@media (min-width: 768px) {
+
+  main {
+    min-height: 100vh;
+  }
+
+  .ReportContainer {
+    width: 612px;
+  }
+
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    width: 188px;
+    height: 213px;
+  }
+
+  .cardCont {
+    width: 188px;
+    height: 180px;
+  }
+
+  .cardBody {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #taskHrs {
+    font-size: 56px;
+  }
+}
+
+/* =========================================================
+   DESKTOP 1440px 
+========================================================= */
+@media (min-width: 1440px) {
+
+  .ReportContainer {
+    width: 1116px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 32px;
+  }
+
+  .headerContainer {
+    height: 100%;
+  }
+
+  .userProfile {
+    height: 255px;
+  }
+
+  .frameLnk {
+    flex-direction: column;
+  }
+
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .card {
+    width: 255px;
+    height: 244px;
+  }
+
+  .cardCont {
+    width: 100%;
+  }
+}
